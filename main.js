@@ -31,9 +31,11 @@ let desc = document.querySelector('#desc');
 form.addEventListener('submit',function(event){
     
     event.preventDefault();
+    let url = `https://goweather.herokuapp.com/weather/${userInput.value}`
     console.log(userInput.value);
+
     
-    fetch(`https://goweather.herokuapp.com/weather/${userInput.value}`) 
+    fetch(encodeURI(url))
     .then(function(y){     
         return y.json()
     })
