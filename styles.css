@@ -24,3 +24,7 @@ h1 {
     font-style: italic;
     color: #999;
 }
+
+.form-control{
+    width: 290px;
+}
